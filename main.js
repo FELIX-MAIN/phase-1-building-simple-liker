@@ -19,7 +19,11 @@ function likeCallback(e) {
         heart.className = "";
       }
     })
-    
+     .catch(function(error) {
+      document. getElementById('modal').className='hidden'
+      modal.innerText = error;
+      setTimeout(() =>  modal.className = "hidden", 3000);
+    });
 }
 
 for (const glyph of articleHearts) {
